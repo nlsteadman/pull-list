@@ -1,5 +1,8 @@
 # The Pull List Backend
-This is a frontend application for a comic book pull list app. The objective of this project is to showcase work that I did for Flatiron School.
+This is a backend application for a comic book pull list app. The objective of this project is to showcase work that I did for Flatiron School.
+
+## Front End Repo
+- [Frontend Repo](https://github.com/nlsteadman/the-pull-list)
 
 ### Requirements
 * node version 17.4.0
