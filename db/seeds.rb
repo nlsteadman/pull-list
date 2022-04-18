@@ -2,6 +2,10 @@ require 'faker'
 
 puts "🌱 Seeding spices..."
 
+Comic.destroy_all
+User.destroy_all
+UserComic.destroy_all
+
 50.times do
     Comic.create(
         name: Faker::DcComics.title,
