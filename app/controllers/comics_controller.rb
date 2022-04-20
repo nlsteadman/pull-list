@@ -27,5 +27,5 @@ class ComicsController < ApplicationController
         def find_comic
             comic = Comic.find_by_id(params[:id])
         end
-    end
+    
 end
