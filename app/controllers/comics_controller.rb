@@ -12,4 +12,20 @@ class ComicsController < ApplicationController
             {errors: comic.errors.full_messages}.to_json
         end
     end
+
+    delete '/comics/:id' do
+        find_comic
+        if comic
+            comic.destroy
+            comic.to_json
+        else
+            { errors: ["Comic doesn't exist"]}.to_json
+        end
+    end
+
+    private
+        def find_comic
+            comic = Comic.find_by_id(params[:id])
+        end
+    end
 end
