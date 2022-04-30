@@ -28,7 +28,7 @@ Comic.create(name: "Harley Quinn", publisher: "DC Comics", description: Faker::L
 
 50.times do
     User.create(
-        name: Faker::Name.name,
+        name: Faker::Name.unique.name,
         address: Faker::Address.street_address,
         phone_number: Faker::PhoneNumber.phone_number,
         email: "email@email.com"
