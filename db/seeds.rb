@@ -6,7 +6,7 @@ Comic.destroy_all
 User.destroy_all
 UserComic.destroy_all
 
-Comic.create(name: "Batman", publisher: "DC", description: Faker::Lorem.sentence, genre: "superhero", image_url: "https://files1.comics.org//img/gcd/covers_by_id/1078/w200/1078486.jpg?-3035803633473500877", price: 5, rating: "Teen")
+Comic.create(name: "Batman", publisher: "DC", description: Faker::Lorem.sentence, genre: "superhero", image_url: "https://storage.googleapis.com/hipcomic/p/e7dff55f6189887e2b046a85659e6cc7-800.jpg", price: 5, rating: "Teen")
 Comic.create(name: "Saga", publisher: "Image Comics", description: Faker::Lorem.sentence, genre: "fantasy-supernatural", image_url: "https://upload.wikimedia.org/wikipedia/en/7/78/Saga1coverByFionaStaples.jpg", price: 3, rating: "Mature")
 Comic.create(name: "BRZRKR", publisher: "BOOM! Studios", description: Faker::Lorem.sentence, genre: "horror-suspense", image_url: "https://upload.wikimedia.org/wikipedia/en/7/7c/BRZRKR_no.1_cover.jpg", price: 4, rating: "Mature")
 Comic.create(name: "Alien", publisher: "Marvel", description: Faker::Lorem.sentence, genre: "science fiction", image_url: "https://i.annihil.us/u/prod/marvel/i/mg/9/30/605cee73034fc/clean.jpg", price: 5, rating: "Parental Advisory")
