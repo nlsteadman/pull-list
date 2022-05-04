@@ -37,8 +37,12 @@ end
 
 50.times do
     UserComic.create(
-        quantity: rand(0..5)
+        quantity: rand(0..5),
+        user_id: rand(602..652),
+        comic_id: rand(137..155)
     )
 end
+
+
 
 puts "✅ Done seeding!"

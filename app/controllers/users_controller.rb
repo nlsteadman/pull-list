@@ -4,6 +4,11 @@ class UsersController < ApplicationController
         @user.to_json
     end
 
+    get "/users/:id" do
+        find_user
+        @user.to_json(include: [:comics])
+    end
+
     post "/users" do
         @user = User.new(params[:user])
         if @user.save
