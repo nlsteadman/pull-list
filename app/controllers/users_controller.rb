@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     get "/users" do
         @user = User.all
-        @user.to_json
+        @user.to_json(include: [:comics])
     end
 
     get "/users/:id" do

@@ -1,7 +1,7 @@
 class ComicsController < ApplicationController
     get "/comics" do
-        @comic = Comic.all
-        @comic.to_json
+        @comics = Comic.all
+        @comics.to_json(include: [:users])
     end
 
     get "/comics/genre" do
