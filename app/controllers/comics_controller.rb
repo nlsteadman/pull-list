@@ -4,14 +4,9 @@ class ComicsController < ApplicationController
         @comics.to_json(include: [:users])
     end
 
-    get "/comics/genre" do
-        @comic = Comic.find(params[:genre])
-        @comic.to_json
-    end
-
     get "/comics/:id" do
         find_comic
-        @comic.to_json(include: [:users])
+        @comic.to_json
     end
 
     get "/comics" do
