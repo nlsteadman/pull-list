@@ -18,6 +18,17 @@ class UsersController < ApplicationController
         end
     end
 
+    patch "/users/:id" do
+        find_user
+        @user.update(
+            name: params[:name],
+            address: params[:address],
+            phone_number: params[:phone_number],
+            email: params[:email]
+        )
+        @user.to_json
+    end
+
     delete '/users/:id' do
         find_user
         if @user
