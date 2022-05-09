@@ -37,7 +37,7 @@ end
 
 50.times do
     UserComic.create(
-        quantity: rand(0..5),
+        quantity: 1,
         user_id: rand(User.first.id..User.last.id),
         comic_id: rand(Comic.first.id..Comic.last.id)
         # user_id: users.ids.sample,

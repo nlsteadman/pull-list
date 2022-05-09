@@ -6,7 +6,7 @@ class ComicsController < ApplicationController
 
     get "/comics/:id" do
         find_comic
-        @comic.to_json
+        @comic.to_json(include: [:users])
     end
 
     get "/comics" do
