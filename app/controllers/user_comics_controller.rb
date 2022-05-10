@@ -1,4 +1,9 @@
 class UserComicsController < ApplicationController
+    get "/user_comics" do
+        @comics = UserComic.all
+        @comics.to_json(include: [:user, :comic])
+    end
+    
     post "/user_comics" do
         @user_comics = UserComic.new(params[:user_comic])
         if @user_comic.save

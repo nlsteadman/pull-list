@@ -14,4 +14,5 @@ use Rack::JSONBodyParser
 # Our application
 use UsersController
 use ComicsController
+use UserComicsController
 run ApplicationController
