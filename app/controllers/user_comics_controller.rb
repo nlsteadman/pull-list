@@ -3,6 +3,11 @@ class UserComicsController < ApplicationController
         @user_comics = UserComic.all
         @user_comics.to_json(include: [:user, :comic])
     end
+
+    get "/user_comics/:id" do
+        find_user_comic
+        @user_comic.to_json(include: [:user, :comic])
+    end
     
     post "/user_comics" do
         @user_comics = UserComic.new(params[:user_comic])
@@ -17,9 +22,7 @@ class UserComicsController < ApplicationController
         find_user_comic
         if @user_comic
             @user_comic.destroy
-            @user_comic.to_json(include: [:comic, :user])
-        else
-            {errors: @user_comic.errors.full_messages}.to_json
+            @user_comic.to_json(include: [:user, :comic])
         end
     end
 
