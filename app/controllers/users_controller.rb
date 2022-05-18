@@ -21,10 +21,10 @@ class UsersController < ApplicationController
     patch "/users/:id" do
         find_user
         @user.update(
-            name: params[:name],
-            address: params[:address],
-            phone_number: params[:phone_number],
-            email: params[:email]
+            name: params[:user][:name],
+            address: params[:user][:address],
+            phone_number: params[:user][:phone_number],
+            email: params[:user][:email]
         )
         @user.to_json
     end
