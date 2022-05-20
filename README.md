@@ -10,9 +10,9 @@ This is a backend application for a comic book pull list app. The objective of t
 
 
 ### How to use
--Fork and clone
--Run npm install
--Run npm start
+- Fork and clone
+- Run npm install
+- Run npm start
 
 ### Licensing
 Copyright <2022> <COPYRIGHT HOLDER>
